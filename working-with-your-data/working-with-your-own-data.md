@@ -44,7 +44,7 @@ If you are retrieving your data from online, perhaps from a publicly available r
 
 ![Terminal tab](screenshots/rstudio-session-terminal.png)
 
-**Step 2)** Copy over the [template script](./template-script/wget-TEMPLATE.sh).
+**Step 2)** Copy over the [wget template script](./template-script/wget-TEMPLATE.sh).
 
 You'll find the `wget` template script in the `template-script/` folder.
 In the RStudio Server, you can click the check mark next to the file name, then go to `More` > and choose `Copy To`.
@@ -102,6 +102,46 @@ unzip -d data/ data/some_array_data.zip
 ```
 
 [Go here](https://itsfoss.com/unzip-linux/) for more on the unzipping command.
+
+### Upload data that is on a ssh server
+
+If you are retrieving your data from an [ssh server](https://searchsecurity.techtarget.com/definition/Secure-Shell), like one your institution or lab may host data on, we encourage you to use [the terminal command `scp`](https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/) to copy over your files you'd like to analyze to our server.
+(Make sure the data does not violate any of the [privacy issues described above](#things-to-know-before-uploading-your-data).)
+
+**Step 1)** Go to the Terminal tab in your RStudio session.
+
+![Terminal tab](screenshots/rstudio-session-terminal.png)
+
+**Step 2)** Copy over the [scp template script](./template-script/wget-TEMPLATE.sh).
+
+You'll find the `scp` template script in the `template-script/` folder.
+In the RStudio Server, you can click the check mark next to the file name, then go to `More` > and choose `Copy To`.
+
+**Step 3)** Confirm your `ssh` login credentials.
+Your institution, or whomever gave you access to the server, should have given you a
+username and server address as well as more specific instructions on how to log on to the server.
+
+Here's very general examples info about logging into [`ssh`](https://help.liquidweb.com/s/article/Logging-into-Your-Server-via-Secure-Shell-SSH).
+
+If you are unsure of the file path of the data you are looking for, we recommend you use [`ls`](https://www.tecmint.com/15-basic-ls-command-examples-in-linux/) and [`find`](https://www.tecmint.com/35-practical-examples-of-linux-find-command/) commands to determine this and copy down the exact file path in your script.
+
+**Step 4)** Set up your `scp` command in the template script we started for you.
+The most simple `scp` command copies from one location to the other.  
+The first argument is the file or directory you'd like to copy.
+The second argument is the location where you'd like to copy the file or directory from the first argument to.
+
+*Template:*
+```
+$ scp <username@from_host>:<FROM_FILE_PATH> <TO_FILE_PATH>
+```
+
+If you are copying a folder of files, you may want to use the `-r` option.
+This will `r`ecursively copy all the files in the folder you reference:
+
+*Template:*
+```
+# scp -r <username@from_host>:<FOLDER_FROM_FILE_PATH> <FOLDER_TO_SAVE_TO>
+```
 
 ### Upload *small* files from your own computer
 
