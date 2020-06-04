@@ -46,11 +46,7 @@ If you are retrieving your data from online, perhaps from a publicly available r
 
 ![Terminal tab](screenshots/rstudio-session-terminal.png)
 
-<<<<<<< HEAD:working-with-your-data/working-with-your-own-data.md
 **Step 2)** Copy over the [wget template script](./template-script/wget-TEMPLATE.sh).
-=======
-**Step 2)** Copy over the [template script](./template-script/wget-TEMPLATE.sh).
->>>>>>> master:virtual-setup/working-with-your-own-data.md
 
 You'll find the `wget` template script in the `template-script/` folder.
 In the RStudio Server, you can click the check mark next to the file name, then go to `More` > and choose `Copy To`.

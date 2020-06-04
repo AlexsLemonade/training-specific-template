@@ -7,10 +7,7 @@ mkdir <FOLDER_TO_SAVE_TO>
 
 # Test your ssh login credentials
 # General examples: https://help.liquidweb.com/s/article/Logging-into-Your-Server-via-Secure-Shell-SSH
-
 # You should have instructions from your institution on how to login.
-# It usually looks something like this:
-ssh <user_name@ipaddress>
 
 # To see scp options, use -h (the help flag)
 scp -h
