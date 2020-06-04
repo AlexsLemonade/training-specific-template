@@ -109,11 +109,7 @@ You can `wget` data still if you need credentials.
 We don't recommend you put your password or any other credentials in the script, so you will want to type the following directly into the Terminal:
 
 ```
-# Example from ftp address::
-wget -O <FILE_PATH_TO_SAVE_TO> ftp://user:password@host/path
-
-# Example from http address:
-wget -O <FILE_PATH_TO_SAVE_TO> http://user:password@host/path
+wget --user=<USERNAME> --ask=<PASSWORD>
 ```
 
 ### Upload *small* files from your own computer
