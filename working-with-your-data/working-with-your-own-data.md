@@ -158,7 +158,7 @@ Click on the `More` button with a gear next to it in the lower right pane.
 
 **Step 3)** Specify the name you would like the downloaded file to have.
 
-![Export window](![Export button](screenshots/export-window.png))
+![Export window](screenshots/export-window.png)
 
 **Step 4)** Find where the file downloaded.
 Your computer may show the file in the bottom left of your browser window.
