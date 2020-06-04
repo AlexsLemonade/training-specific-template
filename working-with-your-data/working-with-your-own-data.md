@@ -109,7 +109,7 @@ You can `wget` data still if you need credentials.
 We don't recommend you put your password or any other credentials in the script, so you will want to type the following directly into the Terminal:
 
 ```
-wget --user=<USERNAME> --ask=<PASSWORD>
+wget --user=<USERNAME> --ask=<PASSWORD> <URL>
 ```
 
 ### Upload *small* files from your own computer
