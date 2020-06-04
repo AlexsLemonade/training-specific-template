@@ -103,6 +103,19 @@ unzip -d data/ data/some_array_data.zip
 
 [Go here](https://itsfoss.com/unzip-linux/) for more on the unzipping command.
 
+**If you have a password:**
+
+You can `wget` data still if you need credentials.
+We don't recommend you put your password or any other credentials in the script, so you will want to type the following directly into the Terminal:
+
+```
+# Example from ftp address::
+wget -O <FILE_PATH_TO_SAVE_TO> ftp://user:password@host/path
+
+# Example from http address:
+wget -O <FILE_PATH_TO_SAVE_TO> http://user:password@host/path
+```
+
 ### Upload *small* files from your own computer
 
 *This will only work for files smaller than 1GB*
