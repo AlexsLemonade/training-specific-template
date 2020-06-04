@@ -139,7 +139,7 @@ The second argument is the location where you'd like to copy the file or directo
 
 *Template:*
 ```
-$ scp <username@from_host>:<FROM_FILE_PATH> <TO_FILE_PATH>
+scp <username@from_host>:<FROM_FILE_PATH> <TO_FILE_PATH>
 ```
 
 If you are copying a folder of files, you may want to use the `-r` option.
@@ -147,7 +147,7 @@ This will `r`ecursively copy all the files in the folder you reference:
 
 *Template:*
 ```
-# scp -r <username@from_host>:<FOLDER_FROM_FILE_PATH> <FOLDER_TO_SAVE_TO>
+scp -r <username@from_host>:<FOLDER_FROM_FILE_PATH> <FOLDER_TO_SAVE_TO>
 ```
 
 Running `scp` command may prompt you to enter your password.
