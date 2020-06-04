@@ -114,7 +114,7 @@ We don't recommend you put your password or any other credentials in the script 
 wget --user=<USERNAME> --ask-password <URL>
 ```
 
-Using the `--ask-password` will prompt you to enter your password. 
+Using the `--ask-password` will prompt you to enter your password.
 
 ### Upload *small* files from your own computer
 
