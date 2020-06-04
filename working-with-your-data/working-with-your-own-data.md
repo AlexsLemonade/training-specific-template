@@ -137,7 +137,7 @@ It will automatically be uncompressed.
 ### Reading the data into your R environment.
 
 This step is very dependent on the format of your data and what you are planning to do with it!
-If your file is a TSV, CSV, or RDS file, follow the examples in the [`intro-to-R-tidyverse/intro-to-tidyverse.Rmd` notebook](intro-to-R-tidyverse/03-intro_to_tidyverse.Rmd).
+If your file is a TSV, CSV, or RDS file, follow the examples in the `intro-to-R-tidyverse/intro-to-tidyverse.Rmd` notebook.
 
 We do NOT recommend clicking on the file in the RStudio panel to load it into your R environment, this typically won't work for anything that's not a very small file.
 
