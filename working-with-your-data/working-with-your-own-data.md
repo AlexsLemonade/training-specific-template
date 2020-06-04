@@ -1,4 +1,6 @@
-## Working with your own data
+---
+title: Working with your own data
+---
 
 The goal of our workshop is to equip you to do initial analyses with your own data!
 This guide will take you through how to get your data onto our RStudio server so you can begin analyzing your own data!
@@ -44,7 +46,11 @@ If you are retrieving your data from online, perhaps from a publicly available r
 
 ![Terminal tab](screenshots/rstudio-session-terminal.png)
 
+<<<<<<< HEAD:working-with-your-data/working-with-your-own-data.md
 **Step 2)** Copy over the [wget template script](./template-script/wget-TEMPLATE.sh).
+=======
+**Step 2)** Copy over the [template script](./template-script/wget-TEMPLATE.sh).
+>>>>>>> master:virtual-setup/working-with-your-own-data.md
 
 You'll find the `wget` template script in the `template-script/` folder.
 In the RStudio Server, you can click the check mark next to the file name, then go to `More` > and choose `Copy To`.
@@ -103,6 +109,16 @@ unzip -d data/ data/some_array_data.zip
 
 [Go here](https://itsfoss.com/unzip-linux/) for more on the unzipping command.
 
+**If you have a password:**
+
+You can still use `wget` to obtain data if you need credentials.
+We don't recommend you put your password or any other credentials in the script or enter your password as part of a command, so you will want to type the following directly into the Terminal:
+
+```
+wget --user=<USERNAME> --ask-password <URL>
+```
+Using the `--ask-password` will prompt you to enter your password.
+
 ### Upload data that is on a ssh server
 
 If you are retrieving your data from an [ssh server](https://searchsecurity.techtarget.com/definition/Secure-Shell), like one your institution or lab may host data on, we encourage you to use [the terminal command `scp`](https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/) to copy over your files you'd like to analyze to our server.
@@ -142,6 +158,9 @@ This will `r`ecursively copy all the files in the folder you reference:
 ```
 # scp -r <username@from_host>:<FOLDER_FROM_FILE_PATH> <FOLDER_TO_SAVE_TO>
 ```
+
+Running `scp` command may prompt you to enter your password.
+You can enter it interactively; it's best to not have the password written in the script.
 
 ### Upload *small* files from your own computer
 
@@ -198,7 +217,7 @@ Click on the `More` button with a gear next to it in the lower right pane.
 
 **Step 3)** Specify the name you would like the downloaded file to have.
 
-![Export window](![Export button](screenshots/export-window.png))
+![Export window](screenshots/export-window.png)
 
 **Step 4)** Find where the file downloaded.
 Your computer may show the file in the bottom left of your browser window.
