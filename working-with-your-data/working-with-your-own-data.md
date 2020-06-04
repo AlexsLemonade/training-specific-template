@@ -106,7 +106,7 @@ unzip -d data/ data/some_array_data.zip
 **If you have a password:**
 
 You can still use `wget` to obtain data if you need credentials.
-We don't recommend you put your password or any other credentials in the script, so you will want to type the following directly into the Terminal:
+We don't recommend you put your password or any other credentials in the script or enter your password as part of a command, so you will want to type the following directly into the Terminal:
 
 ```
 wget --user=<USERNAME> --ask-password <URL>
