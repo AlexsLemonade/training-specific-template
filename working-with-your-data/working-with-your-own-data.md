@@ -24,9 +24,9 @@ We will email you with a reminder 6 months from now so you can make sure to remo
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-  - [Things to know before uploading your data:](#things-to-know-before-uploading-your-data)
   - [Upload data that is online (from a url)](#upload-data-that-is-online-from-a-url)
-  - [Upload data from your own computer](#upload-data-from-your-own-computer)
+  - [Upload data that is on a ssh server](#upload-data-that-is-on-a-ssh-server)
+  - [Upload *small* files from your own computer](#upload-small-files-from-your-own-computer)
   - [Reading the data into your R environment.](#reading-the-data-into-your-r-environment)
 - [Downloading files](#downloading-files)
 - [Installing packages](#installing-packages)
