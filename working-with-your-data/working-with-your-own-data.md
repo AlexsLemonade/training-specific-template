@@ -124,20 +124,15 @@ If you are retrieving your data from an [ssh server](https://searchsecurity.tech
 
 ![Terminal tab](screenshots/rstudio-session-terminal.png)
 
-**Step 2)** Copy over the [scp template script](./template-script/wget-TEMPLATE.sh).
-
-You'll find the `scp` template script in the `template-script/` folder.
-In the RStudio Server, you can click the check mark next to the file name, then go to `More` > and choose `Copy To`.
-
-**Step 3)** Confirm your `ssh` login credentials.
-Your institution, or whomever gave you access to the server, should have given you a
-username and server address as well as more specific instructions on how to log on to the server.
+**Step 2)** Confirm your `ssh` login credentials.
+Your institution, or whomever gave you access to the server, should have given you a username and server address as well as more specific instructions on how to log on to the server.
 
 Here's very general examples info about logging into [`ssh`](https://help.liquidweb.com/s/article/Logging-into-Your-Server-via-Secure-Shell-SSH).
 
 If you are unsure of the file path of the data you are looking for, we recommend you use [`ls`](https://www.tecmint.com/15-basic-ls-command-examples-in-linux/) and [`find`](https://www.tecmint.com/35-practical-examples-of-linux-find-command/) commands to determine this and copy down the exact file path in your script.
 
-**Step 4)** Set up your `scp` command in the template script we started for you.
+**Step 3)** Set up your `scp` command.
+
 The most simple `scp` command copies from one location to the other.  
 The first argument is the file or directory you'd like to copy.
 The second argument is the location where you'd like to copy the file or directory from the first argument to.
