@@ -1,0 +1,18 @@
+name: Test issue creation from file workflow
+
+on:
+  push:
+    branches: 
+      - jaclyn-taroni/try-issue-from-file
+
+jobs:
+  createIssuesFromFile:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create a test issue
+        uses: peter-evans/create-issue-from-file@v2.3.2
+        with:
+          title: Testing issue creation via GHA
+          content-filepath: ./testing/testing.md
+          labels: automated training issue
