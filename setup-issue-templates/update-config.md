@@ -6,7 +6,7 @@ The following variables **must** be updated according the format specified in `_
 - [ ] `start_date`
 - [ ] `end_date`
 - [ ] `workshop_type`
-- [ ] `worshop_content`
+- [ ] `workshop_content`
 - [ ] `instructors`
 - [ ] `docker_repo`
 - [ ] `docker_tag`
