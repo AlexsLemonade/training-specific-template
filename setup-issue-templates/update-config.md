@@ -5,6 +5,7 @@ The following variables **must** be updated according the format specified in `_
 - [ ] `training_title`
 - [ ] `start_date`
 - [ ] `end_date`
+- [ ] `release_tag`
 - [ ] `workshop_type`
 - [ ] `workshop_content`
 - [ ] `instructors`
