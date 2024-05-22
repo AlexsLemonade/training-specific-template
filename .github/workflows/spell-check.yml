@@ -22,6 +22,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Remove files that do not need to be spellchecked
+        run: |
+          rm ./LICENSE.md
+
       - name: Spell check action
         uses: alexslemonade/spellcheck@v0
         id: spell
