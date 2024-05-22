@@ -8,5 +8,3 @@ The following variables **must** be updated according the format specified in `_
 - [ ] `workshop_type`
 - [ ] `workshop_content`
 - [ ] `instructors`
-- [ ] `docker_repo`
-- [ ] `docker_tag`
