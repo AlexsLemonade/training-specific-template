@@ -3,4 +3,4 @@ In [`AlexsLemonade/training-modules`](https://github.com/AlexsLemonade/training-
 Be sure to update the `_config.yml` file _in this repository_ accordingly:
 
 - `release_tag` and `docker_tag` should point to the correct release
-- `docker_repo` should, in most cases, be filled in with `training_rnaseq`
+- `docker_repo` should, in most cases, be filled in with `training_rstudio`
