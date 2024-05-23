@@ -18,7 +18,7 @@ workshop_content: WORKSHOP # Update this value to one of: "intro-r", "intro-bulk
 
 #### Instructor names ####
 # This array should be filled with a list of team members leading a given workshop
-instructors: 
+instructors:
   - Ally Hawkins
   - Jen O'Malley
   - Josh Shapiro
@@ -27,7 +27,7 @@ instructors:
 #### Docker information #####
 # The Docker user will almost always be ccdl, which is why this is here
 docker_user: ccdl
-docker_repo: DOCKER-REPOSITORY
+docker_repo: training_rstudio
 docker_tag: DOCKER-TAG
 # These are for loading Docker images from a file; only relevant for in-person
 docker_targz: ccdl_docker_image.tar.gz
