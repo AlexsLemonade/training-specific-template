@@ -57,12 +57,12 @@ jobs:
           content-filepath: ./setup-issue-templates/draft-schedule.md
           labels: automated training issue, schedule
 
-      # Issue for creating a training-specific release of training-modules
-      - name: Create issue for training-specific release
+      # Issue for updating config with training-specific release values
+      - name: Create issue for updating config with training-specific release values
         uses: peter-evans/create-issue-from-file@v4.0.0
         with:
-          title: Create release of training-modules to associate with this workshop
-          content-filepath: ./setup-issue-templates/workshop-release.md
+          title: Update config to include training-specific release values
+          content-filepath: ./setup-issue-templates/config-release.md
           labels: automated training issue
 
       # Issue for copying completed notebooks from training-modules
