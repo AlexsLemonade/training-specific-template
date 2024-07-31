@@ -1,6 +1,10 @@
 
-<!-- Please update this file to reflect logistics for the workshop being taught. -->
+<!--
+INSTRUCTIONS:
 
+Please update this file to reflect logistics for the workshop being taught.
+Content in this page will automatically be rendered in the `workshop-logistics.md` page, which should _not_ be modified.
+-->
 
 
 ## Workshop Location
