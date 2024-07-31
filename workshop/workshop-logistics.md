@@ -3,6 +3,13 @@ title: Workshop Logistics
 nav_title: Logistics
 ---
 
+<!--
+DO NOT MODIFY THIS FILE!
+If you want to update in-person logistics, please instead update the `local-participant-information.md` file.
+-->
+
+
+
 **Table of contents**
 
 * TOC goes here
