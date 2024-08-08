@@ -74,7 +74,7 @@ jobs:
               ;;
 
             "Bulk RNA-seq")
-              modules=("intro-to-R-tidyverse" "RNA-seq")
+              modules=("intro-to-R-tidyverse" "RNA-seq" "pathway-analysis")
               ;;
           esac
 
@@ -97,7 +97,7 @@ jobs:
           body: |
             ### Description:
             This PR was auto-generated from github actions
-              - Copy completed notebooks for the "${{ github.event.inputs.training-module }}" module from the `training-modules` repository, tag `${{ github.event.inputs.training-modules-tag }}`
+              - Copy completed notebooks associated with the "${{ github.event.inputs.training-module }}" training from the `training-modules` repository, tag `${{ github.event.inputs.training-modules-tag }}`
           labels: |
             automated
           reviewers: $GITHUB_ACTOR
