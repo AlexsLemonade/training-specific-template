@@ -48,13 +48,6 @@ jobs:
       - name: Copy HTML completed notebooks from training-modules
         shell: bash
         run: |
-          # The completed notebooks to copy will depend on which workshop module this is.
-          # For each module, the directory of notebooks to copy are:
-          #  Intro R: intro_to_R_tidyverse/
-          #  Intro scRNA-seq: intro_to_R_tidyverse/ and scRNA-seq/
-          #  Advanced scRNA-seq: scRNA-seq-advanced/
-          #  bulk RNA-seq: intro_to_R_tidyverse/, RNA-seq/, and pathway-analysis/
-
           # Path to copy notebooks to
           target_path=website/completed-notebooks
 
