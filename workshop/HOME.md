@@ -17,9 +17,9 @@ Dates: {{site.start_date}} through {{site.end_date}}
 
 ### Pre-workshop Prep
 
-* Please review the [Code of Conduct](../code-of-conduct.md).
+* Please review the **[Code of Conduct](../code-of-conduct.md)**.
 {%- if site.workshop_content != "advanced-single-cell" %}
-* If you are new to using R, we've [assembled some resources for getting starting with R](../additional-resources/R-resources.md#pre-workshop-prep-for-r-programming) that can optionally help prepare you for the workshop.
+* If you are new to using R, we've **[assembled some resources for getting starting with R](../additional-resources/R-resources.md#pre-workshop-prep-for-r-programming)** that can optionally help prepare you for the workshop.
 {%- endif %}
 * Please review the **[software platforms](../software-setup/software-setup-instructions.md)** we will be using to familiarize yourself with our procedures.
   * You will also need to install
@@ -30,8 +30,8 @@ Dates: {{site.start_date}} through {{site.end_date}}
 `Slack`
 {%- endcase -%}, as described in the link above.
 
-* Sign up for the **Cancer Data Science** Slack workspace at <http://ccdatalab.org/slack>. Please use your full name in your profile, so we can find you easily and add you to the private meeting channel.
-* Once you have been given your username and temporary password, follow [these instructions](../software-setup/rstudio-login.md) to log in to our RStudio server and change your password.
+* Sign up for the **Cancer Data Science Slack workspace** at <http://ccdatalab.org/slack>. Please use your full name in your profile, so we can find you easily and add you to the private meeting channel.
+* Once you have been given your username and temporary password, **[follow these instructions](../software-setup/rstudio-login.md)** to log in to our RStudio server and change your password.
 
 ## Schedule
 
