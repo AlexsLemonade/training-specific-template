@@ -3,8 +3,8 @@ title: Workshop Schedule
 nav_title: Schedule
 ---
 
-<!--See an example from a past remote workshop here: https://github.com/AlexsLemonade/2023-may-training/blob/main/workshop/SCHEDULE.md -->
-<!--See an example from a past in-person workshop here: https://github.com/AlexsLemonade/2023-june-training/blob/main/workshop/SCHEDULE.md -->
+<!--See an example from a past remote workshop here: https://github.com/AlexsLemonade/2024-june-training/blob/main/workshop/SCHEDULE.md -->
+<!--See an example from a past in-person workshop here: https://github.com/AlexsLemonade/2024-december-training/blob/main/workshop/SCHEDULE.md -->
 
 
 | Time        | Topic                                          |
