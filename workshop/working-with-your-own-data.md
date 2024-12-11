@@ -314,7 +314,7 @@ Finally, drag the installed `FileZilla` application icon to your `Applications` 
 
 The first time you open `FileZilla`, you may see this warning message; click `Open`.
 
-<img src="screenshots/filezilla-mac-allow.png" alt = "Allow macOS to use FileZilla application" screen" width="300">
+<img src="screenshots/filezilla-mac-allow.png" alt = "Allow macOS to use FileZilla application" width="300">
 
 
 #### Windows installation
