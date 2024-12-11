@@ -29,7 +29,7 @@ If you have trouble finding the building or the room on the first day of trainin
 **Public transportation**
 
 * SEPTA is the public transportation system in Philadelphia and the surrounding area.
-* At the airport, and at some SEPTA train stations, you can purchase a SEPTA key card. There are a variety of fare options that can be loaded onto a key card for use on public transportation. SEPTA also accepts cash for travel on any of its transit services.
+* You can use cash or contactless pay (credit/debit card or Apple/Google/Samsung Pay) on SEPTA subways and buses.
 * Please refer to the [SEPTA website](https://www5.septa.org/travel/) for more information. (**Note:** The [SEPTA trip planner](https://beta-plan.septa.org/#/) may be a helpful tool if you plan to travel around the city during your stay.)
 
 **Other**
