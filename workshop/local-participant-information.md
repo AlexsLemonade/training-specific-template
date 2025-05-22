@@ -56,6 +56,7 @@ We will evaluate such requests on a case-by-case basis.
 
 To qualify for reimbursement:
 
+* You must be a childhood cancer researcher.
 * You will need to have included this request in your application.
 * You will be required to provide documentation of travel expenses, such as transportation and lodging receipts, and to fill out a reimbursement form after the workshop ends.
 * You must attend the entirety of the workshop.
