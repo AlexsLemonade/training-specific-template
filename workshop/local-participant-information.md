@@ -30,7 +30,7 @@ If you have trouble finding the building or the room on the first day of trainin
 
 * SEPTA is the public transportation system in Philadelphia and the surrounding area.
 * You can use cash or contactless pay (credit/debit card or Apple/Google/Samsung Pay) on SEPTA subways and buses.
-* Please refer to the [SEPTA website](https://www5.septa.org/travel/) for more information. (**Note:** The [SEPTA trip planner](https://plan.septa.org/#/) may be a helpful tool if you plan to travel around the city during your stay.)x
+* Please refer to the [SEPTA website](https://www5.septa.org/travel/) for more information. (**Note:** The [SEPTA trip planner](https://plan.septa.org/#/) may be a helpful tool if you plan to travel around the city during your stay.)
 
 **Other**
 
