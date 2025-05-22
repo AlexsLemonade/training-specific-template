@@ -30,7 +30,7 @@ If you have trouble finding the building or the room on the first day of trainin
 
 * SEPTA is the public transportation system in Philadelphia and the surrounding area.
 * You can use cash or contactless pay (credit/debit card or Apple/Google/Samsung Pay) on SEPTA subways and buses.
-* Please refer to the [SEPTA website](https://www5.septa.org/travel/) for more information. (**Note:** The [SEPTA trip planner](https://beta-plan.septa.org/#/) may be a helpful tool if you plan to travel around the city during your stay.)
+* Please refer to the [SEPTA website](https://www5.septa.org/travel/) for more information. (**Note:** The [SEPTA trip planner](https://plan.septa.org/#/) may be a helpful tool if you plan to travel around the city during your stay.)x
 
 **Other**
 
@@ -63,8 +63,6 @@ To qualify for reimbursement:
 ## Health and Safety
 
 Alex's Lemonade Stand Foundation's Childhood Cancer Data Lab will comply with any governmental requirements related to health and safety.
-We encourage workshop participants to adhere to US governmental guidance.
-You may wish to review the [CDC COVID-19 by County guidance](https://www.cdc.gov/coronavirus/2019-ncov/your-health/covid-by-county.html) when planning for workshop attendance.
 
 If you are feeling sick, please do not attend the workshop.
 We will not withhold your deposit if you cannot attend because you are sick.
