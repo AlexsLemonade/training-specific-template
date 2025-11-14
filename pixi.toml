@@ -1,0 +1,14 @@
+[workspace]
+authors = ["Childhod Cancer Data Lab"]
+channels = ["conda-forge", "bioconda"]
+name = "training-specific-template"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+install = "bundle install"
+serve = {cmd = "bundle exec jekyll serve", depends-on =["install"]}
+
+[dependencies]
+ruby = ">=3.4.7,<4"
+compilers = ">=1.11.0,<2"
