@@ -11,34 +11,16 @@ RStudio by itself is an [integrated development environment](https://en.wikipedi
 
 ### Logging in
 
-To give you access to our RStudio server, we will send you a username and temporary password by direct message in Slack.
-See [these instructions](./software-setup-instructions.md#joining-the-cancer-data-science-slack) for more information about setting up your Cancer Data Science Slack account.
+To give you access to our RStudio server, you will receive an email from `training@ccdatalab.org` that contains a link to your RStudio Server username, password, and the URL you will use to log in.
+That link will expire after 30 days, so we recommend copying down your username and password somewhere safe like your own password manager.
 
-Go to <https://rstudio.ccdatalab.org> and type in your username and temporary password, and click `Sign in`.
-You may want to bookmark <https://rstudio.ccdatalab.org> for the duration of the workshop.
+Go to <https://rstudio.ccdatalab.org/session/{{site.docker_tag}}> and fill in your username and password, and click `Sign in`.
+You may want to bookmark <https://rstudio.ccdatalab.org/session/{{site.docker_tag}}> for the duration of the workshop.
 
 <img src = "screenshots/rstudio-server-login.png" alt = "RStudio Server login screen" width = "750">
 
-Signing in should bring you to the RStudio session page.
-Click on the `Terminal` tab.
+We recommend signing out of RStudio Server at the end of each day (instructions below) to avoid potential login issues the next time you return.
 
-<img src = "screenshots/rstudio-session-terminal.png" alt = "RStudio location of terminal tab" width = "750">
-
-Type the `passwd` command in the `Terminal` tab.
-
-<img src = "screenshots/rstudio-password-change-1.png" alt = "Enter passwd in terminal" width = "500">
-
-Press `Enter`. Then type in the password you were given in Slack.
-Keep in mind, as you are typing in your password, no symbols will appear, but `Terminal` is receiving what you are typing.
-
-
-<img src = "screenshots/rstudio-password-change-2.png" alt = "Enter current password terminal" width = "500">
-
-Type in the new password you've chosen once, and press `Enter`, then it will ask you to confirm by typing it in again.
-Again, no text or dots will show as you are typing your new password.
-Press `Enter` again to complete the password change.
-
-To check that you have successfully changed your password, you may want to log out completely and log back in to the server.
 If you look in the upper right corner of the screen, you should see a series of icons; the box with an arrow pointing out of it is the "Sign Out" button, and if you click that you will be returned to the login screen.
 Re-enter your username and new password, and you should return to the session page.
 
