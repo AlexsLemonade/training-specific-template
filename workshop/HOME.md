@@ -31,7 +31,7 @@ Dates: {{site.start_date}} through {{site.end_date}}
 {%- endcase -%}, as described in the link above.
 
 * Sign up for the **Cancer Data Science Slack workspace** at <http://ccdatalab.org/slack>. Please use your full name in your profile, so we can find you easily and add you to the private meeting channel.
-* Once you have been given your username and temporary password, **[follow these instructions](../software-setup/rstudio-login.md)** to log in to our RStudio server and change your password.
+* Once you have been given your username and temporary password, **[follow these instructions](../software-setup/rstudio-login.md)** to log in to our RStudio server.
 
 ## Schedule
 
