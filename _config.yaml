@@ -13,7 +13,7 @@ end_date: YYYY-MM-DD
 release_tag: master
 
 #### Workshop information ####
-workshop_type: WORKSHOP    # Update this value to either: "remote" or "in-person"
+workshop_type: WORKSHOP # Update this value to either: "remote" or "in-person"
 workshop_content: WORKSHOP # Update this value to one of: "intro-r", "intro-bulk", "intro-single-cell", or "advanced-single-cell"
 
 #### Instructor names ####
@@ -39,8 +39,7 @@ docker_size: SIZE
 # Theme and theme options
 theme: minima
 # Pages to appear in site header.
-header_home:
-  workshop/HOME.md
+header_home: workshop/HOME.md
 header_pages:
   - workshop/SCHEDULE.md
   - workshop/workshop-logistics.md
@@ -51,4 +50,11 @@ header_pages:
 author: Childhood Cancer Data Lab
 email: training@ccdatalab.org
 twitter_username: CancerDataLab
-github_username:  AlexsLemonade
+github_username: AlexsLemonade
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .pixi
+  - pixi.toml
+  - pixi.lock
