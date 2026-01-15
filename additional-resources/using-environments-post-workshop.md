@@ -150,8 +150,9 @@ This link provides full documentation for the `renv` package: <https://rstudio.g
 
 #### R, RStudio, and renv
 
-While not strictly required, we recommend that you install the same `R` version that we used during the workshop (version `4.2.3`).
-(Protip: You might find the [`rig` software](https://github.com/r-lib/rig) useful for getting this specific `R` version!)
+While not strictly required, we recommend that you install the same `R` version that we used during the workshop.
+You can find the specific `R` version from the Console prompt in the training RStudio Server. 
+(Protip: You might find the [`rig` software](https://github.com/r-lib/rig) useful for getting this specific `R` version as well as managing multiple `R` versions!)
 
 You can download R and RStudio following [these instructions](https://posit.co/download/rstudio-desktop/).
 
@@ -162,7 +163,7 @@ You can then launch RStudio and install the `renv` package from CRAN: `install.p
 
 You may need to install a few more things (if you have not previously installed them) so that the R packages `renv` installs can build properly.
 
-* **Windows** users will need to install [`Rtools42` for Windows](https://cran.r-project.org/bin/windows/Rtools/rtools42/rtools.html); this will allow you to compile R packages.
+* **Windows** users will need to install [`Rtools` for Windows](https://cran.r-project.org/bin/windows/Rtools); this will allow you to compile R packages.
   * `Rtools` is generally specific to a given R version, so if you have newly downloaded R, you will need to download the correct `Rtools` version for it as well.
 * **macOS** users will need to install `Xcode` developer command line tools and a GNU `fortran` compiler (`gfortran`), as described [here](https://mac.r-project.org/tools/).
   * You can install command line tools by launching `Terminal` and entering
