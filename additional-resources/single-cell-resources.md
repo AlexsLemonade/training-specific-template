@@ -44,7 +44,7 @@ Click on the project name to see an abstract and other information for the proje
 
 You can then select "Project Matrices" from the left side to download the processed single-cell expression data.
 Scroll down to the "DCP Generated Matrices" section on the "Project Matrices" page, as the data here will be uniformly processed and in a standard data format.
-That format is called `loom`, and we can read it into `R` in a fairly straightforward way.
+That format is called `loom`, and we can read it into R in a fairly straightforward way.
 Once you find a loom file listed (not all projects have one, unfortunately), you have two options:
 
 1. Click the "Copy download link" button (the tiny clipboard icon) and then use that URL to download the file directly to the RStudio server [following these instructions](../workshop/working-with-your-own-data.md#loading-data-from-a-website).

@@ -139,7 +139,7 @@ Once stopped, this icon will switch to a **Play** button which you can click to 
 
 ## Use renv post-workshop
 
-Using `renv` will allow you to replicate the _`R` environment only_ used in the training workshop, but not other command-line tools.
+Using `renv` will allow you to replicate the _R environment only_ used in the training workshop, but not other command-line tools.
 
 This link provides full documentation for the `renv` package: <https://rstudio.github.io/renv/articles/renv.html>.
 
