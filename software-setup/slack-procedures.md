@@ -54,18 +54,6 @@ To start a thread, hover over the message you want to respond to and click the s
 You can then enter your response in the thread sidebar that appears on the right side of the Slack interface.
 In general, you do not want to check the box that sends the message to the entire channel.
 
-#### Collecting feedback
-
-We also use the training-specific private channel to poll participants via [Polly](https://www.polly.ai/slack-poll). We collect the following feedback anonymously:
-
-* The most difficult or confusing point of the module ("muddiest point"), which is posted anonymously to the channel
-* What you liked about the module (anonymous, only instructors will see your answer)
-* How we can improve the module (anonymous, only instructors will see your answer)
-
-Use the `Submit Response` button in a Polly message to enter your feedback:
-
-<img src = "screenshots/slack-polly-response.png" alt = "Submit a response to a Polly poll in Slack" width = "600">
-
 ### Using direct messages during training
 
 If you have a question that is **_highly specific_** to your own data or a problem with your RStudio credentials, you may [direct message](https://slack.com/help/articles/212281468-What-is-a-direct-message) a Data Lab staff member.
