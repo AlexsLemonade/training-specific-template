@@ -52,6 +52,15 @@ We will use Zoom breakout rooms in the following capacities during training:
 For example, if you need assistance during live instruction, the host might place you in a breakout room with a different instructor who can help you solve your issue.
 Again, it is likely you will need to share your screen during a breakout room session.
 
+### Collecting feedback
+
+We will use Zoom polls and surveys to collect feedback during the workshop. 
+We collect the following feedback anonymously:
+
+* The most difficult or confusing point of the module ("muddiest point"), which is posted anonymously to the channel
+* What you liked about the module (anonymous, only instructors will see your answer)
+* How we can improve the module (anonymous, only instructors will see your answer)
+
 ## Using Zoom during consultation
 
 If you need assistance during a consultation session and it would be helpful to share your screen, an instructor will initiate a Zoom call in Slack either in a thread or direct message.
