@@ -54,12 +54,12 @@ The quote characters are not always required, but are a good practice in case th
 
 **Specific example:**
 
-Here's an example using `wget` to download a file from ArrayExpress:
+Here's an example using `wget` to download a file from GEO:
 ```
-wget 'https://www.ebi.ac.uk/arrayexpress/files/E-GEOD-67851/E-GEOD-67851.processed.1.zip'
+wget 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE67nnn/GSE67851/suppl/GSE67851_RAW.tar'
 ```
 
-By default, the file will be saved to the current directory and the file name it had from its origin (so with the above example `E-GEOD-67851.processed.1.zip`).
+By default, the file will be saved to the current directory and the file name it had from its origin (so with the above example `GSE67851_RAW.tar`).
 
 Likely you will want to be more specific about where you are saving the file to and what you are calling it.
 For that, we can use the `-O`, or `output` option with our `wget` command and specify a file path.
@@ -71,7 +71,7 @@ wget -O <FILE_PATH_TO_SAVE_TO> '<URL>'
 
 **Specific example using the `-O` option:**
 
-Here's another example where we will download that same array express file, but instead save it to a `data` folder and call it `some_array_data.zip`.
+Here's another example where we will download that same array express file, but instead save it to a `data` folder and call it `some_array_data.tar`.
 (Best to keep the file extension consistent to avoid troubles!)
 
 
@@ -119,7 +119,7 @@ tar -xf <FILE_TO_UNZIP> -C <DIRECTORY_TO_UNZIP_TO>
 
 **Specific example:**
 
-Here we will unzip the contents of `data/some_array_data.zip` to be saved to the directory `data/`.
+Here we will unzip the contents of `data/some_array_data.tar` to be saved to the directory `data/`.
 
 ```
 tar -xf data/some_array_data.tar -C data/ 
