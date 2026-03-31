@@ -196,122 +196,16 @@ You are likely to find your files in your `Downloads` folder!
 
 ## Transferring large files (≳100MB) to and from your computer
 
-FileZilla is a GUI that helps transfer local files to and from remote servers like our RStudio Server.
-We recommend setting up FileZilla if your dataset is larger than 100 MB or if you will transfer files between your computer and RStudio Server.
+To transfer larger files, you will need to use the [Rclone command line tool](https://rclone.org/) which is available on the RStudio Server.
+Rclone can be run the in Terminal to transfer files to and from other cloud storage products, including but not limited to Dropbox, Box, and Google Drive.
 
-### Installing FileZilla on your computer
+To use Rclone, you will first have to configure it with the command [`rclone config`](https://rclone.org/docs/), during which you will set up the connection to your third-party cloud storage service of choice. 
+When you issue this command in Terminal, there will be a series of prompts for you to follow to get set up. 
 
-Follow the instructions below to install FileZilla on your given operating system.
-
-#### macOS installation
-
-Go to [FileZilla's website](https://filezilla-project.org/download.php?type=client) to download the FileZilla Client.
-
-Click the big green `Download` button.
-
-Click `Download` on this next page for `FileZilla` this is the only free option but will have the functionality you need.
-
-<img src="screenshots/filezilla-download-install.png" alt = "Filezilla download screen" width="400">
-
-After download is complete, you'll find the `FileZilla`'s `.app.tar.bz2` file in your download files or you can click on it in the corner of your web browser's screen.
-Double click on the file to install.
-
-Finally, drag the installed `FileZilla` application icon to your `Applications` folder in Finder where all your other applications are stored.
-
-The first time you open `FileZilla`, you may see this warning message; click `Open`.
-
-<img src="screenshots/filezilla-mac-allow.png" alt = "Allow macOS to use FileZilla application" width="300">
-
-
-#### Windows installation
-
-Go to [FileZilla's website](https://filezilla-project.org/download.php?type=client) to download the FileZilla Client.
-
-Click the big green `Download` button.
-
-Click `Download` on this next page for `FileZilla` this is the only free option but will have the functionality you need.
-
-<img src="screenshots/filezilla-download-install.png" alt = "Filezilla download screen" width="400">
-
-After download is complete, you'll find the `FileZilla` `.exe` file in your download files or you can click on it in the corner of your web browser's screen.
-
-Double click on the file to install to begin installation.
-
-You'll be asked if you want to `Allow FileZilla to make changes` click `Yes`.
-
-There will be a series of steps (like below) you need to agree to.
-
-<img src="screenshots/filezilla-windows.png" alt = "Windows FileZilla installation screen" width="400">
-
-#### Ubuntu installation
-
-Navigate to the Ubuntu Software Center and search for FileZilla.
-Select FileZilla and then click the `Install` button.
-
-Alternatively, you can install FileZilla via the command line with:
-
-```
-sudo apt-get update
-sudo apt-get install filezilla
-```
-
-### Linking FileZilla to the RStudio Server
-
-Open up the FileZilla application.
-At the top of the FileZilla screen, you can enter in the address and your credentials for our RStudio Server (send a message to one of our staff if you forgot your username or password).
-
-<img src="screenshots/filezilla-bar.png" alt = "Enter credentials in FileZilla">
-
-
-For `Host`, type in `rstudio.ccdatalab.org`.
-For `Username`, type in the username you use to login in to our RStudio server.
-For `Password` type in the password you use to login in to our RStudio server.
-For `Port`, type in `22`.
-
-
-Then click the blue `Quickconnect` button.
-FileZilla may ask you if you want it to remember your passwords.
-We'd suggest creating a master password or using `Do not save password`.
-
-<img src="screenshots/filezilla-password.png" alt = "FileZilla save passwords" width="500">
-
-Next, FileZilla will ask you if you should trust our RStudio Server.
-You can check the box for `Always trust this host` if you don't want to be asked this again.
-Then click `OK`.
-
-<img src="screenshots/filezilla-trust-server.png" alt = "FileZilla trust server" width="500">
-
-### Uploading large files from your computer with FileZilla
-
-The left side of the FileZilla window shows the files and folders on your computer and the right side shows the files and folders on the RStudio Server, defaulting to show the folders in your "Home" folder (which has the same name as your username).
-
-On the right side, navigate to the folder you'd like to upload the files to on the RStudio Server.
-
-Then, on the left, navigate to the file or folder on your computer you'd like to upload the RStudio Server.
-On a Mac, you will likely be asked to allow FileZilla to have access to your files.
-Click `OK` for each time.
-
-<img src="screenshots/filezilla-permission.png" alt = "Grant FileZilla permissions on macOS" width="300">
-
-For the folder or file you want to upload, right click on it and choose `Upload`.
-
-<img src="screenshots/filezilla-upload.png" alt = "Upload a file in FileZilla" width="400">
-
-A progress bar on the bottom of the screen will tell you approximately how long it will take to upload.
-
-### Downloading large files from the RStudio Server
-
-The left side of the FileZilla window shows the files and folders on your computer and the right side shows the files and folders on the RStudio Server, defaulting to show the folders in your "Home" folder (which has the same name as your username).
-
-On the left side, navigate to the folder you'd like to download the files to on your computer.
-
-Then, on the right, navigate to the file or folder on the RStudio Server you'd like to download to your computer.
-
-For the folder or file you want to download, right click on it and choose `Download`.
-
-<img src="screenshots/filezilla-download.png" alt = "Download a file in FileZilla" width="400">
-
-A progress bar on the bottom of the screen will tell you approximately how long it will take to download.
+As part of this configuration process, you will be prompted with [`Use web browser to automatically authenticate rclone with remote?`](https://rclone.org/remote_setup/) for logging in to your cloud storage service (e.g., logging into Google Drive).
+You will need to answer `N` to this question, since the RStudio Server we are working on cannot launch a web browser for you for logging in.
+This means you also need to have Rclone installed on your local machine, from which you will log into your cloud storage service.
+You can download and install Rclone from this site: <https://rclone.org/downloads/>.
 
 ## Installing packages
 
