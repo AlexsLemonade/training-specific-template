@@ -101,20 +101,20 @@ You can double check that you successfully made a new folder by running `ls` aga
 Now we are ready to `wget` data and copy it to our `data/` folder.
 
 ```
-wget -O data/some_array_data.zip 'https://www.ebi.ac.uk/arrayexpress/files/E-GEOD-67851/E-GEOD-67851.processed.1.zip'
+wget -O data/some_array_data.tar 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE67nnn/GSE67851/suppl/GSE67851_RAW.tar'
 ```
 
 `-O` is one of many `wget` command options.
 To see the complete list of `wget` options, use the command `wget -h` in Terminal.
 You can also see some [more `wget` examples](https://www.tecmint.com/10-wget-command-examples-in-linux/).
 
-As is recommended and also shown with this example, this dataset is zipped.
-This means after you successfully `wget` the file, you will need to unzip it.
-To unzip the contents to a particular directory, we will use the `-d` option.
+As is recommended and also shown with this example, this dataset is compressed.
+This means after you successfully `wget` the file, you will need to uncompress it.
+To uncompress the contents of a `.tar` file to a particular directory, we will use the `-C` option.
 
 **Template:**
 ```
-unzip -d <DIRECTORY_TO_UNZIP_TO> <FILE_TO_UNZIP>
+tar -xf <FILE_TO_UNZIP> -C <DIRECTORY_TO_UNZIP_TO>
 ```
 
 **Specific example:**
@@ -122,10 +122,11 @@ unzip -d <DIRECTORY_TO_UNZIP_TO> <FILE_TO_UNZIP>
 Here we will unzip the contents of `data/some_array_data.zip` to be saved to the directory `data/`.
 
 ```
-unzip -d data/ data/some_array_data.zip
+tar -xf data/some_array_data.tar -C data/ 
 ```
 
-[Go here](https://itsfoss.com/unzip-linux/) for more on the unzipping command.
+
+[See this site](https://www.geeksforgeeks.org/linux-unix/tar-command-linux-examples/) for more on the `tar` command and other variations on its usage.
 
 **If you have a password:**
 
