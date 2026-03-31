@@ -121,6 +121,7 @@ TSV
 Tung
 Uber
 uncheck
+uncompress
 unmute
 Ventura
 videoconferences
