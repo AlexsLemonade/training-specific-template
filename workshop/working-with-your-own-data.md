@@ -197,14 +197,15 @@ You are likely to find your files in your `Downloads` folder!
 ## Transferring large files (≳100MB) to and from your computer
 
 To transfer larger files, you will need to use the [Rclone command line tool](https://rclone.org/) which is available on the RStudio Server.
-Rclone can be run the in Terminal to transfer files to and from other cloud storage products, including but not limited to Dropbox, Box, and Google Drive.
+Rclone can be run the in Terminal to transfer files to and from other cloud storage products, including but not limited to Dropbox, Box, Google Drive, and One Drive.
 
 To use Rclone, you will first have to configure it with the command [`rclone config`](https://rclone.org/docs/), during which you will set up the connection to your third-party cloud storage service of choice. 
 When you issue this command in Terminal, there will be a series of prompts for you to follow to get set up. 
 
 As part of this configuration process, you will be prompted with [`Use web browser to automatically authenticate rclone with remote?`](https://rclone.org/remote_setup/) for logging in to your cloud storage service (e.g., logging into Google Drive).
 You will need to answer `N` to this question, since the RStudio Server we are working on cannot launch a web browser for you for logging in.
-This means you also need to have Rclone installed on your local machine, from which you will log into your cloud storage service.
+This means you also need to have Rclone installed on your local machine, from which you will log into your cloud storage service with the command `rclone authorize "name-of-service"` when prompted.
+From a Mac you will run this command from a Terminal window, and from a PC you will run this command from the Windows Command Prompt. 
 You can download and install Rclone from this site: <https://rclone.org/downloads/>.
 
 ## Installing packages
