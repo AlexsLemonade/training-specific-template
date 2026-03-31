@@ -90,6 +90,7 @@ pixi
 png
 pre
 Protip
+Rclone
 README
 renv
 reproducibility
