@@ -54,12 +54,12 @@ The quote characters are not always required, but are a good practice in case th
 
 **Specific example:**
 
-Here's an example using `wget` to download a file from ArrayExpress:
+Here's an example using `wget` to download a file from GEO:
 ```
-wget 'https://www.ebi.ac.uk/arrayexpress/files/E-GEOD-67851/E-GEOD-67851.processed.1.zip'
+wget 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE67nnn/GSE67851/suppl/GSE67851_RAW.tar'
 ```
 
-By default, the file will be saved to the current directory and the file name it had from its origin (so with the above example `E-GEOD-67851.processed.1.zip`).
+By default, the file will be saved to the current directory and the file name it had from its origin (so with the above example `GSE67851_RAW.tar`).
 
 Likely you will want to be more specific about where you are saving the file to and what you are calling it.
 For that, we can use the `-O`, or `output` option with our `wget` command and specify a file path.
@@ -71,7 +71,7 @@ wget -O <FILE_PATH_TO_SAVE_TO> '<URL>'
 
 **Specific example using the `-O` option:**
 
-Here's another example where we will download that same array express file, but instead save it to a `data` folder and call it `some_array_data.zip`.
+Here's another example where we will download that same array express file, but instead save it to a `data` folder and call it `some_array_data.tar`.
 (Best to keep the file extension consistent to avoid troubles!)
 
 
@@ -101,31 +101,32 @@ You can double check that you successfully made a new folder by running `ls` aga
 Now we are ready to `wget` data and copy it to our `data/` folder.
 
 ```
-wget -O data/some_array_data.zip 'https://www.ebi.ac.uk/arrayexpress/files/E-GEOD-67851/E-GEOD-67851.processed.1.zip'
+wget -O data/some_array_data.tar 'https://ftp.ncbi.nlm.nih.gov/geo/series/GSE67nnn/GSE67851/suppl/GSE67851_RAW.tar'
 ```
 
 `-O` is one of many `wget` command options.
 To see the complete list of `wget` options, use the command `wget -h` in Terminal.
 You can also see some [more `wget` examples](https://www.tecmint.com/10-wget-command-examples-in-linux/).
 
-As is recommended and also shown with this example, this dataset is zipped.
-This means after you successfully `wget` the file, you will need to unzip it.
-To unzip the contents to a particular directory, we will use the `-d` option.
+As is recommended and also shown with this example, this dataset is compressed.
+This means after you successfully `wget` the file, you will need to uncompress it.
+To uncompress the contents of a `.tar` file to a particular directory, we will use the `-C` option.
 
 **Template:**
 ```
-unzip -d <DIRECTORY_TO_UNZIP_TO> <FILE_TO_UNZIP>
+tar -xf <FILE_TO_UNZIP> -C <DIRECTORY_TO_UNZIP_TO>
 ```
 
 **Specific example:**
 
-Here we will unzip the contents of `data/some_array_data.zip` to be saved to the directory `data/`.
+Here we will unzip the contents of `data/some_array_data.tar` to be saved to the directory `data/`.
 
 ```
-unzip -d data/ data/some_array_data.zip
+tar -xf data/some_array_data.tar -C data/ 
 ```
 
-[Go here](https://itsfoss.com/unzip-linux/) for more on the unzipping command.
+
+[See this site](https://www.geeksforgeeks.org/linux-unix/tar-command-linux-examples/) for more on the `tar` command and other variations on its usage.
 
 **If you have a password:**
 
@@ -137,101 +138,6 @@ wget --user=<USERNAME> --ask-password '<URL>'
 ```
 Using the `--ask-password` will prompt you to enter your password.
 
-## Transferring data from an ssh server
-
-If you are retrieving your data from an [**s**ecure **sh**ell (ssh) server](https://searchsecurity.techtarget.com/definition/Secure-Shell), like one your institution or lab may host data on, we encourage you to use [the terminal command `scp`](https://linuxize.com/post/how-to-use-scp-command-to-securely-transfer-files/) to copy over your files you'd like to analyze to our server.
-(Make sure the data does not violate any of the [privacy issues described above](#things-to-know-before-uploading-your-data).)
-
-**Step 1)** Go to the Terminal tab in your RStudio session.
-
-<img src="screenshots/rstudio-session-terminal.png" alt = "RStudio terminal tab" width="600">
-
-The `scp` command is a way to copy files securely to or from an ssh server.
-It works similarly to the [`cp` command](https://linuxize.com/post/cp-command-in-linux/), which is used for copying files that are all on the same computer.
-To understand how this works, we will practice `cp` with some files already in the RStudio Server.
-
-**Template:**
-
-The first argument is the file you'd like to copy.
-The second argument is the folder location where you'd like to copy the file from the first argument to.
-
-```
-cp <FROM_FILE_PATH> <TO_FILE_PATH>
-```
-
-**Specific Example:**
-
-Here we will copy the `wget` template script *from* its location in `~/shared-data/working-with-your-data` *to* our own `training-modules/` folder.
-
-```
-cp ~/shared-data/template-scripts/wget-TEMPLATE.sh  ~/training-modules/
-```
-
-Let's double check it worked by using the `ls` command.
-
-```
-ls ~/training-modules
-```
-
-You should see `wget-TEMPLATE.sh` printed out in addition to the names of the other folders and files in `~/training-modules` folder.
-
-Here are more [`cp` examples](https://www.geeksforgeeks.org/cp-command-linux-examples/).
-As with other commands, you can use `cp --help` to print out a full list of the options for `cp`.
-
-**Step 2)** Confirm your `ssh` login credentials.
-Your institution, or whomever gave you access to the server, should have given you a username and server address as well as more specific instructions on how to log on to the server.
-
-Below are some very general examples with info about logging into a remote server with [`ssh`](https://help.liquidweb.com/s/article/Logging-into-Your-Server-via-Secure-Shell-SSH).
-
-Generally an ssh login will look something like this:
-```
-ssh username@server
-```
-
-Upon entering this command, it will probably ask you for a password.
-
-Once you are logged into your server, you should try to confirm the file path for the data you are looking to copy.
-If you are unsure of the file path of the data you are looking for, we recommend you use [`ls`](https://www.tecmint.com/15-basic-ls-command-examples-in-linux/) and [`find`](https://www.tecmint.com/35-practical-examples-of-linux-find-command/) commands to determine this and copy down the exact file path in your script.
-
-**Step 3)** Set up your `scp` command.
-
-The `scp` command works similarly to the `cp` command we practiced above, except that the `secure` part of copying from a ssh server will require us to supply the server's address and may require us to enter a password.
-Just as we practiced with `cp`, the first argument is `FROM` the second argument is `TO`.
-
-**Template:**
-The main difference with `scp` versus `cp` is that we will need to add the server address and a colon.
-Whatever login information you used in the previous step is what you will need to use here.
-Then we can use the `FROM` and `TO` file paths as before.
-Remember to get rid of all `<` and `>`'s (these symbols are placeholders; enter your text here instead!).
-
-**Template:**
-
-To copy a single file, you will write something like this:
-```
-scp <username@server>:<FROM_FILE_PATH> <TO_FILE_PATH>
-```
-
-If you are copying a folder of files, you may want to use the `-r` option.
-This will `r`ecursively copy all the files in the folder you reference, as in:
-
-```
-scp -r <username@server>:<FOLDER_FROM_FILE_PATH> <FOLDER_TO_SAVE_TO>
-```
-
-**Specific Example:**
-
-For example, we can copy a file `~/data-on-my-server.txt` from the server to your computer's home directory as follows:
-
-```
-scp <username@server>:~/data-on-my-server.txt ~
-```
-
-Or, we can copy a folder `~/my-project/` from the server to your computer's home directory as follows:
-```
-scp -r <username@server>:~/my-project ~
-```
-
-In either situation you will likely be prompted to enter your password, which you can enter interactively on the command line.
 
 ## Transferring small files (≲100 MB) to and from your computer
 
@@ -290,122 +196,60 @@ You are likely to find your files in your `Downloads` folder!
 
 ## Transferring large files (≳100MB) to and from your computer
 
-FileZilla is a GUI that helps transfer local files to and from remote servers like our RStudio Server.
-We recommend setting up FileZilla if your dataset is larger than 100 MB or if you will transfer files between your computer and RStudio Server.
+To transfer larger files, you will need to use the [Rclone command line tool](https://rclone.org/) which is available on the RStudio Server.
+Rclone can be run in the Terminal to transfer files to and from other cloud storage products, including but not limited to Dropbox, Box, Google Drive, and One Drive.
 
-### Installing FileZilla on your computer
+To use Rclone, you will first have to configure it with the command [`rclone config`](https://rclone.org/docs/), during which you will set up the connection to your third-party cloud storage service of choice. 
+When you issue this command in Terminal, there will be a series of prompts for you to follow to get set up.
 
-Follow the instructions below to install FileZilla on your given operating system.
+As part of this configuration process, you will select the type of cloud storage service you are using (e.g. Google Drive, Dropbox, etc.) and give it a name of your choosing to use with Rclone.
+This name is referred to as your remote.
+You will also be prompted with [`Use web browser to automatically authenticate rclone with remote?`](https://rclone.org/remote_setup/) for logging in to your remote (e.g., logging into Google Drive).
+You will need to answer `N` to this question, since the RStudio Server we are working on cannot launch a web browser for you for logging in.
+This means you also need to have Rclone installed on your local machine, from which you will log into your remote with the command `rclone authorize "name-of-service"` when prompted.
+From a Mac you will run this command from a Terminal window, and from a PC you will run this command from the Windows Command Prompt. 
+You can download and install Rclone from this site: <https://rclone.org/downloads/>.
 
-#### macOS installation
+Once you have configured Rclone, you can copy files to and from your remote.
+For a full list of commands, please see [the Rclone documentation](https://rclone.org/commands/).
+We provide a few examples of common commands below, which assume we have connected to a remote we've named `mydrive`.
 
-Go to [FileZilla's website](https://filezilla-project.org/download.php?type=client) to download the FileZilla Client.
+To list all files on your remote, use the following:
 
-Click the big green `Download` button.
+```sh
+# Template for command
+rclone ls <remote name>:path
 
-Click `Download` on this next page for `FileZilla` this is the only free option but will have the functionality you need.
+# Example command: List all files on your remote
+rclone ls mydrive:
 
-<img src="screenshots/filezilla-download-install.png" alt = "Filezilla download screen" width="400">
-
-After download is complete, you'll find the `FileZilla`'s `.app.tar.bz2` file in your download files or you can click on it in the corner of your web browser's screen.
-Double click on the file to install.
-
-Finally, drag the installed `FileZilla` application icon to your `Applications` folder in Finder where all your other applications are stored.
-
-The first time you open `FileZilla`, you may see this warning message; click `Open`.
-
-<img src="screenshots/filezilla-mac-allow.png" alt = "Allow macOS to use FileZilla application" width="300">
-
-
-#### Windows installation
-
-Go to [FileZilla's website](https://filezilla-project.org/download.php?type=client) to download the FileZilla Client.
-
-Click the big green `Download` button.
-
-Click `Download` on this next page for `FileZilla` this is the only free option but will have the functionality you need.
-
-<img src="screenshots/filezilla-download-install.png" alt = "Filezilla download screen" width="400">
-
-After download is complete, you'll find the `FileZilla` `.exe` file in your download files or you can click on it in the corner of your web browser's screen.
-
-Double click on the file to install to begin installation.
-
-You'll be asked if you want to `Allow FileZilla to make changes` click `Yes`.
-
-There will be a series of steps (like below) you need to agree to.
-
-<img src="screenshots/filezilla-windows.png" alt = "Windows FileZilla installation screen" width="400">
-
-#### Ubuntu installation
-
-Navigate to the Ubuntu Software Center and search for FileZilla.
-Select FileZilla and then click the `Install` button.
-
-Alternatively, you can install FileZilla via the command line with:
-
-```
-sudo apt-get update
-sudo apt-get install filezilla
+# Example command: List files inside a specific path on your remote
+rclone ls mydrive:folder/with/files/
 ```
 
-### Linking FileZilla to the RStudio Server
+To copy a file or folder from your remote to the RStudio Server, use the following:
 
-Open up the FileZilla application.
-At the top of the FileZilla screen, you can enter in the address and your credentials for our RStudio Server (send a message to one of our staff if you forgot your username or password).
+```sh
+# Template for command
+rclone copy <remote name>:<path to file in remote> <path to save file to on RStudio Server> 
 
-<img src="screenshots/filezilla-bar.png" alt = "Enter credentials in FileZilla">
+# Example command
+rclone copy mydrive:folder/with/files/file_to_copy.txt ~/folder_with_my_files/
+```
 
+To copy a file or folder from to your remote from the RStudio Server, use the following:
 
-For `Host`, type in `rstudio.ccdatalab.org`.
-For `Username`, type in the username you use to login in to our RStudio server.
-For `Password` type in the password you use to login in to our RStudio server.
-For `Port`, type in `22`.
+```sh
+# Template for command
+rclone copy <file on RStudio Server> <remote name>:<path to send file to on your remote>
 
+# Example command, which will place file_to_copy.txt at the top-level folder of your remote
+rclone copy ~/folder_with_my_files/file_to_copy.txt mydrive:
 
-Then click the blue `Quickconnect` button.
-FileZilla may ask you if you want it to remember your passwords.
-We'd suggest creating a master password or using `Do not save password`.
+# Or, copy to a specific folder in your remote
+rclone copy ~/folder_with_my_files/file_to_copy.txt mydrive:folder/with/files/
+```
 
-<img src="screenshots/filezilla-password.png" alt = "FileZilla save passwords" width="500">
-
-Next, FileZilla will ask you if you should trust our RStudio Server.
-You can check the box for `Always trust this host` if you don't want to be asked this again.
-Then click `OK`.
-
-<img src="screenshots/filezilla-trust-server.png" alt = "FileZilla trust server" width="500">
-
-### Uploading large files from your computer with FileZilla
-
-The left side of the FileZilla window shows the files and folders on your computer and the right side shows the files and folders on the RStudio Server, defaulting to show the folders in your "Home" folder (which has the same name as your username).
-
-On the right side, navigate to the folder you'd like to upload the files to on the RStudio Server.
-
-Then, on the left, navigate to the file or folder on your computer you'd like to upload the RStudio Server.
-On a Mac, you will likely be asked to allow FileZilla to have access to your files.
-Click `OK` for each time.
-
-<img src="screenshots/filezilla-permission.png" alt = "Grant FileZilla permissions on macOS" width="300">
-
-For the folder or file you want to upload, right click on it and choose `Upload`.
-
-<img src="screenshots/filezilla-upload.png" alt = "Upload a file in FileZilla" width="400">
-
-A progress bar on the bottom of the screen will tell you approximately how long it will take to upload.
-
-### Downloading large files from the RStudio Server
-
-The left side of the FileZilla window shows the files and folders on your computer and the right side shows the files and folders on the RStudio Server, defaulting to show the folders in your "Home" folder (which has the same name as your username).
-
-On the left side, navigate to the folder you'd like to download the files to on your computer.
-
-Then, on the right, navigate to the file or folder on the RStudio Server you'd like to download to your computer.
-
-For the folder or file you want to download, right click on it and choose `Download`.
-
-<img src="screenshots/filezilla-download.png" alt = "Download a file in FileZilla" width="400">
-
-A progress bar on the bottom of the screen will tell you approximately how long it will take to download.
 
 ## Installing packages
 

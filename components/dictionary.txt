@@ -90,6 +90,7 @@ pixi
 png
 pre
 Protip
+Rclone
 README
 renv
 reproducibility
@@ -120,6 +121,7 @@ TSV
 Tung
 Uber
 uncheck
+uncompress
 unmute
 Ventura
 videoconferences
