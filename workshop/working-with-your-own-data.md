@@ -203,14 +203,14 @@ To use Rclone, you will first have to configure it with the command [`rclone con
 When you issue this command in Terminal, there will be a series of prompts for you to follow to get set up.
 
 As part of this configuration process, you will select the type of cloud storage service you are using (e.g. Google Drive, Dropbox, etc.) and give it a name of your choosing to use with Rclone.
-This name is referred to as your `remote`.
-You will also be prompted with [`Use web browser to automatically authenticate rclone with remote?`](https://rclone.org/remote_setup/) for logging in to your cloud storage service (e.g., logging into Google Drive).
+This name is referred to as your remote.
+You will also be prompted with [`Use web browser to automatically authenticate rclone with remote?`](https://rclone.org/remote_setup/) for logging in to your remote (e.g., logging into Google Drive).
 You will need to answer `N` to this question, since the RStudio Server we are working on cannot launch a web browser for you for logging in.
-This means you also need to have Rclone installed on your local machine, from which you will log into your cloud storage service with the command `rclone authorize "name-of-service"` when prompted.
+This means you also need to have Rclone installed on your local machine, from which you will log into your remote with the command `rclone authorize "name-of-service"` when prompted.
 From a Mac you will run this command from a Terminal window, and from a PC you will run this command from the Windows Command Prompt. 
 You can download and install Rclone from this site: <https://rclone.org/downloads/>.
 
-Once you have configured Rclone, you can copy files to and from your third-party cloud storage.
+Once you have configured Rclone, you can copy files to and from your remote.
 For a full list of commands, please see [the Rclone documentation](https://rclone.org/commands/).
 We provide a few examaples of common commands below, which asume we have connected to a remote we've named `mydrive`.
 
@@ -231,7 +231,7 @@ To copy a file or folder from your remote to the RStudio Server, use the followi
 
 ```sh
 # Template for command
-rclone copy <remote name>:<path to file in third-party cloud storage> <path to save file to on RStudio Server> 
+rclone copy <remote name>:<path to file in remote> <path to save file to on RStudio Server> 
 
 # Example command
 rclone copy mydrive:folder/with/files/file_to_copy.txt ~/folder_with_my_files/
@@ -241,7 +241,7 @@ To copy a file or folder from to your remote from the RStudio Server, use the fo
 
 ```sh
 # Template for command
-rclone copy <file on RStudio Server> <remote name>:<path to send file to on third-party cloud storage>
+rclone copy <file on RStudio Server> <remote name>:<path to send file to on your remote>
 
 # Example command, which will place file_to_copy.txt at the top-level folder of your remote
 rclone copy ~/folder_with_my_files/file_to_copy.txt mydrive:
