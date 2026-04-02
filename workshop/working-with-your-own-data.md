@@ -212,7 +212,7 @@ You can download and install Rclone from this site: <https://rclone.org/download
 
 Once you have configured Rclone, you can copy files to and from your remote.
 For a full list of commands, please see [the Rclone documentation](https://rclone.org/commands/).
-We provide a few examaples of common commands below, which asume we have connected to a remote we've named `mydrive`.
+We provide a few examples of common commands below, which aasume we have connected to a remote we've named `mydrive`.
 
 To list all files on your remote, use the following:
 
