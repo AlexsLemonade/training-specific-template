@@ -154,7 +154,7 @@ For most operating systems, you can right-click on your data folder, and choose 
 * [See here](https://edu.gcfglobal.org/en/techsavvy/working-with-zip-files/1/#) for more detailed instructions on creating zip files in Windows and macOS.
 * For reference, here's how you [compress files from the command line](https://coolestguidesontheplanet.com/how-to-compress-and-uncompress-files-and-folders-in-os-x-lion-10-7-using-terminal/).
 
-**Step 2)** Once your data is compressed to a single file, log in to your RStudio server account (<https://rstudio.ccdatalab.org/>).
+**Step 2)** Once your data is compressed to a single file, log in to your RStudio server account (<https://rstudio.ccdatalab.org/session/{{site.docker_tag}}>).
 
 **Step 3)** Use the `Upload button` to choose your compressed data folder.
 
