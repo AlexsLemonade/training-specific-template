@@ -43,6 +43,7 @@ endcase
 endcomment
 endif
 endfor
+endunless
 Ensembl
 epitope
 et

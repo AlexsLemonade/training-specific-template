@@ -14,7 +14,7 @@ We will meet in the Amenity Suite located on the lower level.
 Enter the building through the Center Lobby and take the elevator down one floor (labeled "LL").
 The Amenity Suite is the first room you will see after exiting the elevator.
 Please note that Bala Plaza is an office park with multiple buildings.
-If you have trouble finding the building or the room on the first day of training, please use Slack to [direct message](/software-setup/slack-procedures.html#using-direct-messages-during-training) `Jen O'Malley`.
+If you have trouble finding the building or the room on the first day of training, please use Slack to [direct message](/software-setup/slack-procedures.html#using-direct-messages-during-training) one of the instructors ({% for instructor in site.instructors %}`{{ instructor }}`{% unless forloop.last %}, {% endunless %}{% endfor %}).
  {% comment %}
  NOTE: `html` relative link above is used since this is an included file.
  {% endcomment %}
