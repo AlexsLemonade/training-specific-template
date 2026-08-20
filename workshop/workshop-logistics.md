@@ -33,6 +33,8 @@ Our goals for the workshop include the following:
   the R programming language and the fundamentals of bulk RNA-seq analysis
 {%- when "advanced-single-cell" -%}
   advanced scRNA-seq analyses
+{%- when "spatial" -%}
+  spatial transcriptomics analyses
 {%- endcase %}
 through a series of hands-on, interactive lessons.
 * You are able to ask questions and receive 1:1 assistance as needed during instruction. Because our instruction is almost entirely through hands-on lessons, we want to make sure we can help you through any difficulties or errors you may encounter.

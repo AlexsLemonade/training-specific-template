@@ -24,6 +24,8 @@ In this training workshop, we will be using the following modules:
   - [Intro to Bulk RNA-seq](https://github.com/AlexsLemonade/training-modules/tree/{{site.release_tag}}/RNA-seq)
 {% when "advanced-single-cell" %}
   - [Advanced single-cell RNA-seq](https://github.com/AlexsLemonade/training-modules/tree/{{site.release_tag}}/scRNA-seq-advanced)
+{% when "spatial" %}
+  - [Spatial transcriptomics](https://github.com/AlexsLemonade/training-modules/tree/{{site.release_tag}}/spatial)
 {% endcase %}
 
 The link(s) above will take you to our `training-modules` GitHub repository where all materials are stored, but we will also directly provide you will all of these materials as part of the workshop.
