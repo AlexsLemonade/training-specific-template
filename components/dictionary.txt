@@ -55,6 +55,7 @@ FileZilla's
 forloop
 Gb
 GDebi
+geospatial
 GitLab
 GRCh
 GRCm
@@ -80,11 +81,16 @@ macOS
 miQC
 md
 modifided
+multiomics
+multiscale
 Monterey
 Muris
 musculus
 nonconsensual
+omics
 OSCA
+OSTA
+Pachter
 PHI
 PII
 pixi
@@ -107,6 +113,7 @@ SingleCellExperiment
 SingleR
 Slackbot
 socio
+Squidpy
 src
 Stoeckius
 subfolder

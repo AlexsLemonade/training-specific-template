@@ -10,7 +10,7 @@ Content in this page will automatically be rendered in the `workshop-logistics.m
 ## Workshop Location
 
 **The workshop will be held at Alex's Lemonade Stand Foundation, at [401 Three Bala Plaza East, Bala Cynwyd, PA 19004](https://maps.app.goo.gl/qDy5j2NFQpx6n7Lk8)**, just outside of Philadelphia.
-When you arrive, come up to the 4th floor, and someone will let you into the ALSF suite.
+When you arrive, come up to the fourth floor, and someone will let you into the ALSF suite.
 
 Please note that Bala Plaza is an office park with multiple buildings. 
 There are two Three Bala Plaza buildings, east and west, which are both red brick.
