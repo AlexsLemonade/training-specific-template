@@ -18,7 +18,7 @@ Dates: {{site.start_date}} through {{site.end_date}}
 ### Pre-workshop Prep
 
 * Please review the **[Code of Conduct](../code-of-conduct.md)**.
-{%- if site.workshop_content != "advanced-single-cell" %}
+{%- if site.includes_r contains site.workshop_content %}
 * If you are new to using R, we've **[assembled some resources for getting starting with R](../additional-resources/R-resources.md#pre-workshop-prep-for-r-programming)** that can optionally help prepare you for the workshop.
 {%- endif %}
 * Please review the **[software platforms](../software-setup/software-setup-instructions.md)** we will be using to familiarize yourself with our procedures.
