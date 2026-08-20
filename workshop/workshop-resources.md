@@ -19,6 +19,7 @@ The [`modules-cheatsheets` directory](https://github.com/AlexsLemonade/training-
 * Introduction to single-cell RNA-seq module cheatsheet ([View Markdown](https://github.com/AlexsLemonade/training-modules/blob/{{site.release_tag}}/module-cheatsheets/scRNA-seq-cheatsheet.md), [Download PDF](https://github.com/AlexsLemonade/training-modules/raw/{{site.release_tag}}/module-cheatsheets/scRNA-seq-cheatsheet.pdf))
 * Advanced to single-cell RNA-seq module cheatsheet ([View Markdown](https://github.com/AlexsLemonade/training-modules/blob/{{site.release_tag}}/module-cheatsheets/scRNA-seq-advanced-cheatsheet.md), [Download PDF](https://github.com/AlexsLemonade/training-modules/raw/{{site.release_tag}}/module-cheatsheets/scRNA-seq-advanced-cheatsheet.pdf))
 * Converting among single-cell data formats cheatsheet ([View Markdown](https://github.com/AlexsLemonade/training-modules/blob/{{site.release_tag}}/module-cheatsheets/sce-conversion-cheatsheet.md), [Download PDF](https://github.com/AlexsLemonade/training-modules/raw/{{site.release_tag}}/module-cheatsheets/sce-conversion-cheatsheet.pdf))
+* Spatial transcriptomics cheatsheet ([View Markdown](https://github.com/AlexsLemonade/training-modules/blob/{{site.release_tag}}/module-cheatsheets/spatial-cheatsheet.md), [Download PDF](https://github.com/AlexsLemonade/training-modules/raw/{{site.release_tag}}/module-cheatsheets/spatial-cheatsheet.pdf))
 
 You may find these helpful as you review instruction material or work through exercise notebooks.
 
@@ -44,6 +45,7 @@ After your access to the RStudio Server has ended, you may wish to continue work
 ### R programming
 
 See [this page](../additional-resources/R-resources.md) for recommendations on getting started with R programming, as well as some links to useful external resources on R.
+
 ### Bulk transcriptomics data
 
 See [this page](../additional-resources/bulk-resources.md) for more resources on working with bulk transcriptomics data, including RNA-seq and microarray.
@@ -54,3 +56,9 @@ Resources include how to find practice datasets to work with as well as informat
 See [this page](../additional-resources/single-cell-resources.md) for more resources on working with scRNA-seq.
 
 Resources include how to find practice datasets to work with as well as a list of external resources for performing common analyses in scRNA-seq data.
+
+### Spatial transcriptomic data
+
+See [this page](../additional-resources/spatial-resources.md) for more resources on working with spatial transcriptomic data.
+
+Resources include how to find practice datasets to work with as well as a list of external resources for performing common analyses in spatial transcriptomic data.
