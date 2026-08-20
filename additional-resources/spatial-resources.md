@@ -27,7 +27,7 @@ The 10x Genomics website has a [datasets page](https://www.10xgenomics.com/datas
 
 ## Additional spatial transcriptomics resources
 
-This list provides some links to external resources on transcriptomics resources analysis methods that may be useful to you as you develop your own analysis skills and practices.
+This list provides some links to external resources on spatial transcriptomics analysis methods that may be useful to you as you develop your own analysis skills and practices.
 
 - [Orchestrating Spatial Transcriptomics Analysis (OSTA) with Bioconductor - Bioconductor](https://bioconductor.org/books/release/OSTA/)
 - [Giotto Suite: a multiscale and technology-agnostic spatial multiomics analysis ecosystem - Chen _et al._ (2025)](https://doi.org/10.1038/s41592-025-02817-w)
