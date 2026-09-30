@@ -16,6 +16,7 @@ on:
           - "Introduction to single-cell RNA-seq"
           - "Advanced single-cell RNA-seq"
           - "Bulk RNA-seq"
+          - "Spatial Transcriptomics"
         required: true
       training-modules-tag:
         type: string
@@ -29,14 +30,14 @@ jobs:
 
     steps:
       - name: Checkout training-modules repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
         with:
           repository: AlexsLemonade/training-modules
           ref: ${{ github.event.inputs.training-modules-tag }}
           path: training-modules
 
       - name: Checkout this repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
         with:
           path: website
 
@@ -69,6 +70,10 @@ jobs:
             "Bulk RNA-seq")
               modules=("intro-to-R-tidyverse" "RNA-seq" "pathway-analysis")
               ;;
+
+            "Spatial Transcriptomics")
+              modules=("spatial")
+              ;;
           esac
 
           # Copy all completed notebooks from the given directories
@@ -78,7 +83,7 @@ jobs:
           done
 
       - name: Create PR with rendered notebooks
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v8
         id: cpr
         with:
           path: website # must be a RELATIVE path to _this_ repo
@@ -86,7 +91,7 @@ jobs:
           signoff: false
           branch: auto_copy_completed_notebooks
           delete-branch: true
-          title: 'GHA: Automated transfer of completed notebooks'
+          title: "GHA: Automated transfer of completed notebooks"
           body: |
             ### Description:
             This PR was auto-generated from github actions
@@ -94,7 +99,6 @@ jobs:
           labels: |
             automated
           reviewers: $GITHUB_ACTOR
-
 
       # Write out PR info
       - name: Check outputs
